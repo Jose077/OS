@@ -1,11 +1,9 @@
-import { Request, Response, Router } from "express";
-
+import { Router } from "express";
+import { productsRouter } from "@modules/products/infra/http/routes/products.routes";
 
 const router = Router();
 
-router.get("/", (request: Request, response: Response) => {
-  return response.send("OLÁ DEVS");
-})
+router.use('/products', productsRouter);
 
 
 export { router }
