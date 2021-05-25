@@ -26,4 +26,14 @@ describe("Create Client Controller", () => {
 
     expect(response.status).toBe(201);
   });
+
+  it("should not be able create client already exists", async () => {
+    const response = await request(app)
+      .post("/clients")
+      .send({
+        name: "Test Client"
+      });
+
+    expect(response.status).toBe(400);
+  });
 });
