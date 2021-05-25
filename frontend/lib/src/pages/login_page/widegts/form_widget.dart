@@ -70,7 +70,7 @@ class FormWidgetState extends State<FormWidget> {
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
-                    child: Text("Entrar", 
+                    child: Text("Efetuar cadastro", 
                       style: TextStyle(fontSize: 15),
                     ),
                   ),
