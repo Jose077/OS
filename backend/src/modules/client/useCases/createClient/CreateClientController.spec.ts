@@ -24,9 +24,6 @@ describe("Create Client Controller", () => {
         name: "Test Client"
       })
 
-    // console.log(response);
-
-
     expect(response.status).toBe(201);
   });
 });
