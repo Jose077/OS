@@ -1,0 +1,12 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "OS Documentation",
+    "description": "This is an API OS",
+    "version": "1.0.0",
+    "contact": {
+      "email": "tharlys2015c@gmail.com, josimarjr479@gmail.com"
+    }
+  },
+  "paths": {}
+}
