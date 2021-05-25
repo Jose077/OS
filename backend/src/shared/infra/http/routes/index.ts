@@ -1,11 +1,9 @@
-import { Request, Response, Router } from "express";
+import { Router } from "express";
 
+import { clientsRoutes } from "@modules/client/infra/http/clients.routes";
 
 const router = Router();
 
-router.get("/", (request: Request, response: Response) => {
-  return response.send("OLÁ DEVS");
-})
-
+router.use("/clients", clientsRoutes);
 
 export { router }
