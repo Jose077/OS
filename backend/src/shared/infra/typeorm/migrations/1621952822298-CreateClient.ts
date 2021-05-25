@@ -10,7 +10,7 @@ export class CreateClient1621952822298 implements MigrationInterface {
           columns: [
             {
               name: "id",
-              type: "uuid",
+              type: "numeric",
               isPrimary: true
             },
             {

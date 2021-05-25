@@ -1,8 +1,8 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, PrimaryColumn } from 'typeorm';
 
 @Entity('produto')
 class Product {
-  @PrimaryGeneratedColumn("increment")
+  @PrimaryColumn()
   id: number;
 
   @Column({ name: "nome" })
@@ -12,8 +12,8 @@ class Product {
   price: number;
 
   constructor() {
-    if (!this.id) {
-      this.id = Math.ceil(Math.random() * 100);
+    if (process.env.NODE_ENV === 'test' && !this.id) {
+      this.id = Math.ceil(Math.random() * 1000000);
     }
   }
 }

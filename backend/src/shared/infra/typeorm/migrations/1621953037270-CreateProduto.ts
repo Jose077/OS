@@ -10,7 +10,7 @@ export class CreateProduto1621953037270 implements MigrationInterface {
           columns: [
             {
               name: "id",
-              type: "uuid",
+              type: "numeric",
               isPrimary: true
             },
             {

@@ -9,10 +9,12 @@ let connection: Connection;
 describe('Create Product Controller', () => {
   beforeAll(async () => {
     connection = await createConnection();
+
+    await connection.runMigrations();
   });
 
   afterAll(async () => {
-    // await connection.dropDatabase();
+    await connection.dropDatabase();
     await connection.close();
   });
 
@@ -23,6 +25,7 @@ describe('Create Product Controller', () => {
         name: 'Moto',
         price: 80
       });
+
 
     expect(response.status).toBe(201);
   });

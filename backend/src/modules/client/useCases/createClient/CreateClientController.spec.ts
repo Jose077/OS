@@ -22,7 +22,7 @@ describe("Create Client Controller", () => {
       .post("/clients")
       .send({
         name: "Test Client"
-      })
+      });
 
     expect(response.status).toBe(201);
   });
