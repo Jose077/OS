@@ -1,0 +1,17 @@
+{
+  "type": "postgres",
+  "port": 8080,
+  "host": "g.cti.grupobrisanet.com.br",
+  "username": "developer",
+  "password": "dv1010aa",
+  "database": "os",
+  "entities": [
+    "./dist/modules/**/infra/typeorm/entities/**.js"
+  ],
+  "migrations": [
+    "./dist/shared/infra/typeorm/migrations/*.js"
+  ],
+  "cli": {
+    "migrationsDir": "./dist/shared/infra/typeorm/migrations"
+  }
+}
