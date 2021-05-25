@@ -29,4 +29,16 @@ describe('Create Product Controller', () => {
 
     expect(response.status).toBe(201);
   });
+
+  it('should not be able to create a new product already exists', async () => {
+    const response = await request(app)
+      .post('/products')
+      .send({
+        name: 'Moto',
+        price: 154
+      });
+
+    expect(response.status).toBe(400);
+    expect(response.body.message).toBe("Product already exists");
+  })
 });
